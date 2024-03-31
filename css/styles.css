@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem;
+    text-align: left;
+}
+header a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+header h1 {
+    margin-left: 10px;
+}
+
+/* Navigation styling */
+nav{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+nav ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 20px; /* Adjust as needed */
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+nav ul li a:hover {
+    background: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Form styling */
+#doctor-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#doctor-details label {
+    display: block;
+    margin-bottom: 5px;
+}
+#patient-details {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#explanation-button{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.submit-button{
+    background-color: #528696;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-button:hover{
+    background-color: #7186c0;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto; /* Enable scroll if needed */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%; /* You can adjust this as needed */
+    max-height: 80vh; /* 80% of the viewport height */
+    overflow-y: auto; /* Enable vertical scroll */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Footer styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* DAS28 Calculator styling */
+#das-calculator {
+    background: #fff; /* White background */
+    padding: 20px; /* Padding around the content */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box-shadow for depth */
+    margin: 20px; /* Margin around the section */
+}
+
+.svg-container {
+    display: flex;
+    justify-content: center; /* Keep the container's items centered if needed */
+    margin-top: 20px;
+    width: 100%; /* Ensure the container fills its parent's width */
+    position: relative; /* Establish a positioning context for absolute children */
+    min-height: 50px; /* Set a minimum height to ensure container can hold the headers */
+}
+
+.svg-header {
+    font-size: 20px; /* Set font size for clarity */
+    padding: 10px; /* Add padding for aesthetic spacing */
+    background-color: #528696; /* Set background color for visibility */
+    color: white; /* Set text color for contrast */
+    border-radius: 5px; /* Round the corners for a smoother look */
+    position: absolute; /* Enable precise placement relative to .svg-container */
+    top: 50%; /* Start at the vertical center of the container */
+    transform: translateY(-50%); /* Shift upwards by half its own height to center vertically */
+}
+
+#tender-header {
+    left: 15%; /* Place at 1/4 width of the container from the left */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+}
+
+#swollen-header {
+    right: 15%; /* Place at 1/4 width of the container from the right */
+    transform: translate(50%, -50%); /* Adjust for own width and center vertically */
+}
+
+.clear-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#patientGlobalHealth {
+    width: 300px;
+}
+#patientGlobalHealthValue {
+    padding-left: 15px;
+}
+#calculate-das-score{
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#retrieve-data {
+    background: #fff; /* White background */
+    padding: 20px; /* Padding around the content */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box-shadow for depth */
+    margin: 20px; /* Margin around the section */
+}
+
+#submit-button-id {
+    margin-top: 10px;
+}
+
+#patient-details table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+#patient-details th, #patient-details td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+#patient-details th {
+    background-color: #f2f2f2;
+}
+
+.chart-container {
+    width: 50%;  /* or any other dimension */
+    height: 400px; /* or any other dimension */
+    margin: auto;  /* centers the chart */
+  }
+  
+  /* Responsive aspect */
+  @media screen and (max-width: 480px) {
+    .chart-container {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+.hospital-logo {
+    width: 90px; /* adjust as needed */
+    height: 90px; /* adjust as needed */
+}
+
+.hospital-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hospital-info {
+    text-align: right;
+    font-size: small;
+}
+
+.score-table{
+    width: 50%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.score-table th, .score-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.score-table th {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rheumatoid Arthritis Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="kem_logo.png" style="width:90px;height:90px;"><h1>RA Tracker</h1></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Enter Patient Data</a></li>
+                <li><a href="pages/retrieve_patient_data.html">Retrieve Patient Data</a></li>
+                <li><a href="pages/das28_calculator.html">DAS28 Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="doctor-details">
+            <span class="form-group">
+                <label for="doctor-name">Doctor Name:</label>
+                <input type="text" id="doctor-name" name="doctor-name" required>
+            </span>
+            <span class="form-group">
+                <label for="date">Date:</label>
+                <input type="text" id="date" name="date" required>
+            </span>
+        </section>
+        <section id="patient-details">
+            <h2>Enter Patient Details</h2>
+            <form id="patient-form">
+                <div class="form-group">
+                    <label for="unique_id">Unique ID of the patient (if Any):</label>
+                    <input type="text" id="unique_id" name="unique_id">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name of the patient:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age of the patient:</label>
+                    <input type="text" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="sex">Sex of the patient:</label>
+                    <input type="text" id="sex" name="sex" required>
+                </div>
+                <div class="form-group">
+                    <label for="disease_severity">Disease Severity (1 for Low, 2 for Moderate or High):</label>
+                    <input type="text" id="disease_severity" name="disease_severity" required>
+                </div>
+                <div class="form-group">
+                    <label for="medical_history">Medical History (comma-separated):</label>
+                    <input type="text" id="medical_history" name="medical_history" required>
+                </div>
+                <div class="form-group">
+                    <label for="other_conditions">Other Conditions (comma-separated):</label>
+                    <input type="text" id="other_conditions" name="other_conditions" required>
+                </div>
+                <button type="button" id="explanation-button">ℹ️ How HAQ, VAS, DAS28 scoring is done</button>
+                <div id="explanation-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>HAQ Scoring</h3>
+                        <p>The Health Assessment Questionnaire (HAQ) is a patient self-reported questionnaire that measures
+                            the degree of difficulty experienced by the patient in eight functional areas: dressing/grooming, arising, eating,
+                            walking, hygiene, reach, grip, and common daily activities. Each question is scored from 0 to 3, with 0 being no
+                            difficulty and 3 being unable to perform the activity. The scores are then averaged to obtain the overall HAQ score.
+                            Higher scores indicate more severe functional impairment.</p>
+                            <h3>VAS Scoring</h3>
+                        <p>The Visual Analog Scale (VAS) is a subjective measure of the patient's assessment of their pain,
+                            disease activity, or other relevant symptom. The patient is asked to rate their symptom on a 100-mm horizontal line,
+                            with 0 mm being no symptom or the best possible outcome and 100 mm being the worst possible symptom or outcome.</p>
+                            <img src="vas_scoring.png" style="width:300px;height:100px;" >
+                            <h3>DAS28 Scoring</h3>
+                        <p>The Disease Activity Score 28 (DAS28) is a composite index used to assess disease activity in
+                            rheumatoid arthritis. It includes the evaluation of tender joint count, swollen joint count, erythrocyte sedimentation
+                            rate (ESR), and patient's global assessment of disease activity using a VAS. The DAS28 score ranges from 0 to 10,
+                            with higher scores indicating higher disease activity.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="vas">VAS:</label>
+                    <input type="text" id="vas" name="vas" required>
+                </div>
+                <div class="form-group">
+                    <label for="haq">HAQ:</label>
+                    <input type="text" id="haq" name="haq" required>
+                </div>
+                <div class="form-group">
+                    <label for="das28">DAS28:</label>
+                    <input type="text" id="das28" name="das28" required>
+                </div>
+                <div class="form-group">
+                    <label for="medicines-prescribed">Medicines Prescribed:</label>
+                    <input type="text" id="medicines-prescribed" name="medicines-prescribed" required>
+                </div>
+                <div class="form-group">
+                    <label for="additional-comments">Additional Comments:</label>
+                    <input type="text" id="additional-comments" name="additional-comments">
+                </div>
+                <button type="submit" class="submit-button">Generate Report</button>
+            </form>
+        </section>
+    </main>
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="result-content"></div><br>
+            <button type="button" id="save-result">Save Report</button>
+            <button type="button" id="submit-result">Submit to Database</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Created by Devansh Lalwani & Swapnil Bhat</p>
+    </footer>
+    <script type="module" src="scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+
+</body>

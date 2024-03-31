@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rheumatoid Arthritis Tracker</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../kem_logo.png" style="width:90px;height:90px;"><h1>RA Tracker</h1></a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Enter Patient Data</a></li>
+                <li><a href="retrieve_patient_data.html">Retrieve Patient Data</a></li>
+                <li><a href="das28_calculator.html">DAS28 Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="retrieve-data">
+            <h1>
+              Retrieve Patient Data
+            </h1>
+            <div class="patient-unique-id-retrieve">
+                <label for="unique_id">Enter Patient Id:</label>
+                <input type="text" id="unique_id" name="unique_id" required>
+            </div>
+            <button type="submit" id="submit-button-id">Submit</button>
+            <div id="patient-data">
+                <h2>Patient Details</h2>
+                <div id="patient-details"></div>
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                  </div>
+            </div>
+            </section>
+        
+    </main>
+    <footer>
+        <p>&copy; Created by Devansh Lalwani & Swapnil Bhat</p>
+    </footer>
+    <script type="module" src="retrieve_script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
