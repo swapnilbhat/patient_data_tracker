@@ -10,3 +10,10 @@ The data is stored in a MySQL database.
 - Retrieve existing patient information by Unique ID.
 - Plot VAS, HAQ, and DAS28 progression for a given patient using JS.
 
+##Installation for backend setup
+- `pip install mysql-connector-python fastapi uvicorn`
+
+##Server installation
+-`sudo apt install nginx`
+
+
