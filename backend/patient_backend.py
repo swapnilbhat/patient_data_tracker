@@ -8,7 +8,7 @@ app = FastAPI()
 # Set up CORS for your FastAPI app
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:3000","http://13.232.190.140"],  # List of allowed origins
+    allow_origins=["http://127.0.0.1:3000","http://13.232.190.140","http://localhost"],  # List of allowed origins
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
@@ -16,11 +16,11 @@ app.add_middleware(
 
 # Database configuration
 dbconfig = {
-    "host": "127.0.0.1",
+    "host": os.getenv("SQL_DB_HOST", "127.0.0.1"),
     "port": 3306,
-    "user": "root",
-    "password": os.getenv("SQL_DB_PASSWORD", "password"),#export DATABASE_PASSWORD='yourpassword'
-    "database": "patient_database"
+    "user": os.getenv("SQL_DB_USER", "root"),
+    "password": os.getenv("SQL_DB_PASSWORD", "password"),
+    "database": os.getenv("SQL_DB_NAME", "patient_database")
 }
 
 DB_TABLE = 'rheumat_table'
